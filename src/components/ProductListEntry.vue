@@ -50,8 +50,9 @@ export default {
   display: grid;
   gap: 0.5rem;
   grid-template-columns: 1fr 2fr 1fr;
-  border: 1px solid black;
   padding: 0.25rem 0rem;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 0.25rem;
 }
 .product-entry > div {
   min-height: 13rem;
@@ -66,13 +67,13 @@ export default {
   margin-right: 0.5rem;
 }
 .product-title {
-  margin: 0.25rem;
+  margin: 0.25rem 0;
 }
 .product-manufacturer {
-  margin-top: 0.25rem;
+  margin: 0;
 }
 .product-description {
-  margin-top: 2rem;
+  margin: 2rem 0;
 }
 .price {
   text-align: left;
