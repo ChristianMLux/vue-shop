@@ -34,3 +34,12 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+</style>
