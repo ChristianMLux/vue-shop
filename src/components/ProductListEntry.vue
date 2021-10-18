@@ -99,6 +99,8 @@ export default {
   display: flex;
   flex-flow: column;
   margin: 0.5rem;
+  font-weight: bold;
+  font-style: oblique;
 }
 .product-gross-price {
   flex-grow: 1;
