@@ -15,7 +15,11 @@
     <div class="product-buy-information">
       <p class="product-netto-price price">{{ netPrice }}</p>
       <p class="product-gross-price price">{{ grossPrice }}</p>
-      <button class="add-to-cart-btn" id="addToCartBtn" :click="addToCart">
+      <button
+        class="add-to-cart-btn"
+        id="addToCartBtn"
+        @click="$emit('addToCart')"
+      >
         Add to Cart
       </button>
     </div>
@@ -25,6 +29,7 @@
 <script>
 export default {
   name: "ProductListEntry",
+  emits: ["addToCart"],
   props: {
     title: {
       type: String,
@@ -97,5 +102,21 @@ export default {
 }
 .product-gross-price {
   flex-grow: 1;
+}
+button {
+  background: #a3db33;
+  border-radius: 0.25rem;
+  opacity: 0.9;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  outline: 0.5px rgba(0, 0, 0, 0.12) 0px 1px 3px,
+    rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+button:active {
+  outline: 1px solid darkgreen;
+}
+button:active::after {
+  margin-left: 1rem;
+  content: "\2714";
 }
 </style>
